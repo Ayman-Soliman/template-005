@@ -1,0 +1,1368 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+*::selection{
+    background-color: var(--main-color);
+    color: #fff;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: black;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 3px;
+    background-color: var(--main-alt-color);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--main-color);
+}
+html{
+    scroll-behavior: smooth;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+input:focus::placeholder,
+textarea:focus::placeholder{
+    opacity: 0;
+}
+textarea{
+    resize: none;
+}
+input:focus,
+textarea:focus{
+    outline: none;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.overflow{
+    overflow: hidden;
+}
+/* ------------------------------start container media ------------------------------------ */
+@media (min-width : 576px){ /* small devices => landscape phones */
+    .container{
+        width: 540px;
+    }
+}
+@media (min-width : 768px){ /* medium Devices => Tablets */
+    .container{
+        width: 720px;
+    }
+}
+@media (min-width : 992px){ /* Desktops */
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width : 1200px){ /* Large Screens */
+    .container{
+        width: 1170px;
+    }
+}
+/* ------------------------------end container media --------------------------------------------*/
+/* ------------------------------start padding and margin media --------------------------------------------*/
+.p-5{
+    padding: 5px;
+}
+.p-10{
+    padding: 10px;
+}
+.p-20{
+    padding: 20px;
+}
+.pr-5{
+    padding-right: 5px;
+}
+.pr-10{
+    padding-right: 10px;
+}
+.pr-20{
+    padding-right: 20px;
+}
+.pt-5{
+    padding-top: 5px;
+}
+.pt-10{
+    padding-top: 10px;
+}
+.pt-20{
+    padding-top: 20px;
+}
+.pb-5{
+    padding-bottom: 5px;
+}
+.pb-10{
+    padding-bottom: 10px;
+}
+.pb-20{
+    padding-bottom: 20px;
+}
+.pl-5{
+    padding-left: 5px;
+}
+.pl-10{
+    padding-left: 10px;
+}
+.pl-20{
+    padding-left: 20px;
+}
+.m-5{
+    margin: 5px;
+}
+.m-10{
+    margin: 10px;
+}
+.m-20{
+    margin: 20px;
+}
+.mr-5{
+    margin-right: 5px;
+}
+.mr-10{
+    margin-right: 10px;
+}
+.mr-20{
+    margin-right: 20px;
+}
+.ml-5{
+    margin-left: 5px;
+}
+.ml-10{
+    margin-left: 10px;
+}
+.ml-20{
+    margin-left: 20px;
+}
+.mb-5{
+    margin-bottom: 5px;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.mt-5{
+    margin-top: 5px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.section-padding{
+    padding: 60px 0;
+}
+.auto{
+    margin-right: auto;
+    margin-left: auto;
+}
+.right-auto{
+    margin-right: auto;   
+    /* margin-left: 0;    */
+}
+.left-auto{
+    margin-left: auto;   
+    /* margin-left: 0;    */
+}
+.border-grey{
+    border: 1px solid var(--grey-color);
+}
+.border-dark-grey{
+    border: 1px solid var(--dark-grey-color);
+}
+.border-main{
+    border: 1px solid var(--main-color);
+}
+.border-white{
+    border: 1px solid white;
+}
+.border-black{
+    border: 1px solid #000;
+}
+/* ------------------------------end padding and margin media --------------------------------------------*/
+
+/* ------------------------------start display system framework ------------------------------------ */
+
+.hide{
+    display: none;
+}
+.block{
+    display: block;
+}
+.grid-col-5{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+.grid-col-4{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.grid-col-3{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+.grid-col-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+@media (max-width : 767px) {
+    .grid-col-2,
+    .grid-col-3,
+    .grid-col-4{
+        grid-template-columns: minmax(100px, 1fr);
+        gap: 10px;
+    }
+}
+.flex{
+    display: flex;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+@media (max-width:767px) {
+    .flex-column-mobile{
+        flex-direction:column;
+    }
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+.flex-align-center{
+    display: flex;
+    align-items: center;
+}
+.flex-justify-center{
+    display: flex;
+    justify-content: center;
+}
+.flex-justify-between{
+    display: flex;
+    justify-content: space-between;
+}
+.flex-center{
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: center;
+}
+.flex-center-between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex-1{
+    flex: 1;
+}
+.flex-2{
+    flex: 2;
+}
+.gap-10{
+    gap: 10px;
+}
+.gap-20{
+    gap: 20px;
+    column-gap: 20px;
+}
+.w-full{
+    width: 100%;
+}
+.fit-content{
+    width: fit-content;
+}
+/* ------------------------------end global grid and flex system framework ------------------------------------ */
+
+/* --------------------------start text framework -------------------------- */
+.txt-c{
+    text-align: center;
+}
+.txt-r{
+    text-align: right;
+}
+@media(max-width:767px){
+    .txt-c-mobile{
+        text-align: center;
+    }
+}
+.cap{
+    text-transform: capitalize;
+}
+.upper{
+    text-transform: uppercase;
+}
+.bold{
+    font-weight: bold;
+}
+.disc{
+    font-size: 0.8rem;
+}
+/* --------------------------end text framework -------------------------- */
+
+/* --------------------------start position framework -------------------------- */
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.fixed{
+    position: fixed;
+    z-index: 20;
+}
+.sticky{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+/* --------------------------end position framework -------------------------- */
+/* --------------------------strt colors and shadow framework -------------------------- */
+.bg-white{
+    background-color: white;
+}
+.bg-black{
+    background-color: black;
+}
+.bg-black-transparent{
+    background-color: #00000077;
+}
+.bg-main{
+    background-color: var(--main-color);
+}
+.bg-main-transparent{
+    background-color: var(--main-alt-color);
+}
+.bg-orange{
+    background-color: var(--orange-color);
+}
+.bg-orange-transparent{
+    background-color: var(--orange-transparent-color);
+}
+.bg-green{
+    background-color: var(--green-color);
+}
+.bg-green-transparent{
+    background-color: var(--green-transparent-color);
+}
+.bg-red{
+    background-color: var(--red-color);
+}
+.bg-red-transparent{
+    background-color: var(--red-transparent-color);
+}
+.bg-section{
+    background-color: var(--gray-section-background);
+}
+.bg-grey{
+    background-color: var(--grey-color);
+}
+.bg-dark-grey{
+    background-color: var(--dark-grey-color);
+}
+.c-black{
+    color: black;
+}
+.c-white{
+    color: white;
+}
+.c-main{
+    color: var(--main-color);
+}
+.c-orange{
+    color: var(--orange-color);
+}
+.c-green{
+    color: var(--green-color);
+}
+.c-red{
+    color: var(--red-color);
+}
+.c-grey{
+    color: var(--dark-grey-color);
+}
+.shadow{
+    box-shadow: var(--shadow);
+}
+.rad-6{
+    border-radius: 6px;
+}
+.rad-10{
+    border-radius: 10px;
+}
+.rad-50{
+    border-radius: 50%;
+}
+/* --------------------------end colors ramework -------------------------- */
+.btn{
+    padding: 6px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+/* ------------------------------start headings framework ----------------------------- */
+.main-title{
+    position: relative;
+    border: 2px solid var(--sec-color);
+    width: fit-content;
+    margin: 60px auto;
+    text-align: center;
+    padding: 10px 20px;
+    color: var(--sec-color);
+    transition: var(--transition-duration);
+    text-transform: uppercase;
+    z-index: 1;
+}
+.main-title::before,
+.main-title::after{
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    top: 50%;
+    transform: translateY(-50%);
+}
+.main-title::before{
+    left: -30px;
+}
+.main-title::after{
+    right: -30px;
+}
+.main-title:hover{
+    color: white;
+    transition-delay: 0.5s;
+}
+.main-title:hover::before{
+    z-index: -1;
+    animation: before-fill-effect 0.5s linear forwards;
+}
+@keyframes before-fill-effect {
+    50%{
+        left: 0px;
+        height: 10px;
+        border-radius: 50%;
+    }
+    51%{
+        height: 100%;
+        width: 10px;
+        border-radius: 0;
+    }
+    100%{
+        border-radius: 0;
+        height: 100%;
+        left: 0;
+        width: 100%;
+    }
+}
+.main-title:hover::after{
+    z-index: -1;
+    animation: after-fill-effect 0.5s linear forwards;
+}
+@keyframes after-fill-effect {
+    50%{
+        right: 0px;
+        height: 10px;
+        border-radius: 50%;
+    }
+    51%{
+        height: 100%;
+        width: 10px;
+        border-radius: 0;
+    }
+    100%{
+        border-radius: 0;
+        height: 100%;
+        right: 0;
+        width: 100%;
+    }
+}
+.main-heading{
+    text-align: center;
+}
+.main-heading .heading{
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+    margin: 20px 0;
+    color: #666;
+}
+.main-heading .heading::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--sec-color);
+    bottom: 0;
+    left: 0;
+}
+.main-heading .heading::after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid var(--sec-color);
+    bottom: -7.5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;    
+}
+.main-heading .heading-para{
+    max-width: 350px;
+    text-align: center;
+    margin: 0 auto 30px;
+    color: #666;
+}
+/* ------------------------------end headings framework ----------------------------- */
+
+/* ------------------------------start switch checkbox framework ----------------------------- */
+.toggle-checkbox{
+    --webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+.toggle-switch{
+    width: 40px;
+    height: 20px;
+    border-radius: 15px;
+    transition: var(--transition-duration);
+    cursor: pointer;
+}
+.toggle-switch::before{
+    font-family: "Font Awesome 6 Free";
+    content: "\f00d";
+    font-weight: 900;
+    position: absolute;
+    font-size: 0.6rem;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 2px; */
+    height: 16px;
+    width: 16px;
+    transition: var(--transition-duration);
+}
+.toggle-checkbox:checked + .toggle-switch{
+    background-color: var(--main-color);
+}
+.toggle-checkbox:checked + .toggle-switch::before{
+    content: "\f00c";
+    left: 22px;
+    color: var(--main-color);
+}
+/* ------------------------------end switch checkbox framework ----------------------------- */
+/* ------------------------------start custom checkbox framework ----------------------------- */
+.custom-checkbox input{
+    --webkit-appearance:none;
+    appearance: none;
+}
+.custom-checkbox label{
+    cursor: pointer;
+    padding-left: 30px;
+}
+.custom-checkbox label::before,
+.custom-checkbox label::after{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    transition: var(--transition-duration);
+}
+.custom-checkbox label::before{
+    left: 0;
+    content: "";
+    border: 1px solid var(--dark-grey-color);
+    border-radius: 4px;
+    margin-top: -10px;
+}
+.custom-checkbox label::after{
+    font-family: "Font Awesome 6 Free";
+    content: "\f00c";
+    font-weight: 900;
+    left: 1px;
+    margin-top: -9px;
+    transform: scale(0) rotate(360deg);
+    color: white;
+    background-color: var(--main-color);
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-checkbox:hover label::before{
+    border-color: var(--main-color);
+    background-color: var(--grey-color);
+}
+.custom-checkbox input:checked + label::before,
+.custom-checkbox input:checked + label::after{
+    border-radius: 50%;
+    border-color: transparent;
+}
+.custom-checkbox input:checked + label::after{
+    transform: scale(1);
+}
+/* ------------------------------end custom checkbox framework ----------------------------- */
+/* ------------------------------start slider Images section framework ----------------------------- */
+.image-slider {
+    min-height: 100vh;
+    overflow: hidden;
+}
+.image-slider .text{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+}
+.image-slider .text p{
+    line-height: 1.8;
+}
+.image-slider .slider-overlay{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0 ,0.6);
+}
+.image-slider img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: scale(1);
+    filter: brightness(2);
+    transition: 1s;
+}
+.image-slider img.active{
+    filter: brightness(1);
+    transform: scale(1.1);
+    opacity: 1;
+}
+.image-slider .arrows{
+    width: 100%;
+    height: 100%;
+}
+.image-slider .arrows i{
+    cursor: pointer;
+}
+.image-slider .bullets{
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20%;
+}
+.image-slider .bullets li{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+.image-slider .bullets li.active{
+    background-color: var(--main-color);
+}
+/* ------------------------------End slider Images section framework ----------------------------- */
+/* ------------------------------start global artical section framework ----------------------------- */
+.artical-card{
+    border: 1px solid #eee;
+    position: relative;
+    transition: var(--transition-duration);
+    box-shadow: var(--artical-shadow);
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.artical-card:hover{
+    transform: translateY(-10px);
+}
+.artical-card .content{
+    padding: 10px;
+}
+.artical-card .content h4{
+    color: var(--main-color);
+    font-size: 1.2rem;
+}
+.artical-card .content p{
+    line-height: 1.8;
+    color: #666;
+    font-size: 0.8rem;
+}
+.artical-card .read-more{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+.artical-card .read-more a{
+    color: var(--main-color);
+    font-size: 0.8rem;
+}
+.artical-card .read-more i{
+    color: var(--main-color);
+}
+.artical-card:hover i{
+    animation: moving-arrow var(--transition-duration) infinite;
+}
+@keyframes moving-arrow {
+    100%{
+        transform: translateX(-10px);
+    }
+}
+
+/* ------------------------------end global artical section framework ------------------------------- */
+
+/* ------------------------------start global gallery section framework ------------------------------ */
+.flashing-card{
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%),
+                0 2px 4px 0 rgb(0 0 0 /15%);
+    /* position: relative; */
+}
+.flashing-card .card-img{
+    position: relative;
+    overflow: hidden;
+}
+.flashing-card .card-img::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: rgb(255 255 255 / 20%);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* transition: var(--transition-duration); */
+    z-index: 2;
+}
+.flashing-card:hover .card-img::before{
+    animation: flashing 0.7s;
+}
+@keyframes flashing {
+    0%,40%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        width: 200%;
+        height: 200%;
+    }
+}
+.flashing-card .card-img img{
+    transition: var(--transition-duration);
+}
+.flashing-card:hover .card-img img{
+    transform: rotate(5deg) scale(1.1);
+    /* filter: grayscale(100%); */
+}
+/* ------------------------------end global gallery section framework ------------------------------------ */
+
+/* ------------------------------start global features section framework ------------------------------*/
+.feat{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    border: 1px solid #ccc;
+    counter-increment: feat;
+    box-shadow: var(--artical-shadow);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.feat .feat-img{
+    position: relative;
+    overflow: hidden;
+
+}
+.feat .feat-img::before{
+    content: "0"counter(feat);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 0;
+    width: 0;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: var(--transition-duration);
+    font-size: 0rem;
+    font-weight: bold;
+    color: white;
+}
+.feat:nth-child(3n+1) .feat-img::before{
+    background-color: rgb(33 150 243 / 50%);
+}
+.feat:nth-child(3n+2) .feat-img::before{
+    background-color: rgb(243 33 33 / 50%);
+}
+.feat:nth-child(3n+3) .feat-img::before{
+    background-color: rgb(255 193 7/50%);
+}
+.feat:nth-child(3n+1) h3{
+    color: var(--main-color);
+}
+.feat:nth-child(3n+2) h3{
+    color:rgb(243, 33, 33);
+}
+.feat:nth-child(3n+3) h3{
+    color: rgb(255, 193, 7);
+}
+.feat:nth-child(3n+1) h3::after{
+    background-color: var(--main-color);
+}
+.feat:nth-child(3n+2) h3::after{
+    background-color: rgb(243, 33, 33);
+}
+.feat:nth-child(3n+3) h3::after{
+    background-color: #ffc107;
+}
+.feat:hover .feat-img::before{
+    padding-top: 80px;
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 6rem;
+}
+.feat .feat-img::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transition: var(--transition-duration);
+    border-width: 0 0 200px 600px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+    transition: var(--transition-duration);
+}
+.feat:hover .feat-img::after{
+    border-width: 0 600px 200px 500px;
+}
+/* .feat .feat-img::after{
+    content: "0"counter(feat);
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    font-size: 6rem;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    transition: var(--transition-duration);
+    color: white;    
+}
+.feat:hover .feat-img::after{
+    left: 50%;
+} */
+.feat h3{
+    /* color: var(--main-color); */
+    padding: 10px 0 30px;
+    font-size: 1.8rem;
+    position: relative;
+}
+/* .feat:nth-child(3n+1) h3,
+.feat:nth-child(3n+1) a{
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+.feat:nth-child(3n+2) h3,
+.feat:nth-child(3n+2) a{
+    color: rgb(243 33 33 / 100%);
+    border-color: rgb(243 33 33 / 100%);;
+}
+.feat:nth-child(3n+3) h3,
+.feat:nth-child(3n+3) a{
+    color: var(--main-color);
+    border-color: var(--main-color);
+} */
+.feat h3::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: calc(100% - 30px);
+    bottom: 10px;
+    left: 15px;
+    /* background-color: var(--main-color); */
+}
+.feat p{
+    color: #333;
+    line-height: 1.8;
+    padding: 20px;
+    text-align: center;
+    /* border-top: 1px solid #ccc; */
+    /* border-bottom: 1px solid #ccc; */
+    /* margin: 20px 0 ; */
+}
+.feat:nth-child(3n+1) a{
+    border: 3px solid var(--main-color);
+    color: var(--main-color);
+    background: linear-gradient(to right,var(--main-color) 50%,white 50%);
+    background-size: 200% 100%;
+    background-position-x: right;
+    transition: var(--transition-duration);
+    font-weight: bold;
+}
+.feat:nth-child(3n+2) a{
+    border: 3px solid rgb(243, 33, 33);
+    color: rgb(243, 33, 33);
+    background: linear-gradient(to right,rgb(243, 33, 33) 50%,white 50%);
+    background-size: 200% 100%;
+    background-position-x: right;
+    transition: var(--transition-duration);
+    font-weight: bold;
+}
+.feat:nth-child(3n+3) a{
+    border: 3px solid #ffc107;
+    color: rgb(255, 193, 7);
+    background: linear-gradient(to right,#ffc107 50%,white 50%);
+    background-size: 200% 100%;
+    background-position-x: right;
+    transition: var(--transition-duration);
+    font-weight: bold;
+}
+.feat a{
+    display: block;
+    margin: 20px;    
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-size: 1.2rem;
+}
+.feat a:hover{
+    background-position-x: left;
+    color: white;
+}
+/* ------------------------------end global features section framework --------------------------- */
+
+/* --------------------------start global testimonials section framework -------------------------- */
+.testimonial-card{
+    background-color: white;
+    position: relative;
+    border-radius: 10px;
+    /* box-shadow: var(--artical-shadow); */
+    padding: 20px;
+    border: 1px solid white;
+}
+.testimonial-card::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #ddd;
+    transition: var(--transition-duration);
+}
+.testimonial-card:hover::before{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+.testimonial-card img{
+    position: absolute;
+    width: 100px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: var(--gray-section-background);
+    top: -40px;
+    right: -10px;
+}
+.testimonial-card .content{
+    position: relative;
+}
+.testimonial-card h3{    
+    margin-bottom: 10px;
+    /* position: relative; */
+}
+.testimonial-card span{
+    color: #666;
+}
+.testimonial-card .stars{
+    margin: 10px 0;
+}
+.testimonial-card .stars i{
+    color: #ffc107;
+}
+.testimonial-card p{
+    line-height: 1.6;
+    color: #666;
+}
+/* --------------------------end global testimonials section framework -------------------------- */
+
+/* --------------------------start global team member section framework -------------------------- */
+.team-card{
+    padding: 30px 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.team-card::before,
+.team-card::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+.team-card::before{
+    border-radius: 20px;
+    background-color: var(--gray-section-background);
+    width: calc(100% - 60px);
+}
+.team-card::after{
+    background-color: #ccc;
+    width: 0;
+    transition: var(--transition-duration);
+}
+.team-card:hover:after{
+    width: calc(100% - 60px);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.team-card .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.team-card .content img{
+    width: 300px;
+    border-radius: 20px;
+    transition: var(--transition-duration);
+}
+.team-card:hover .content img{
+    filter: grayscale(0.5);
+}
+.team-card .content .social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+.team-card .content .social i{
+    margin: 10px;
+    /* width: 100%; */
+    text-align: center;
+    cursor: pointer;
+    color: var(--main-color);
+}
+.team-card .content .social i:hover{
+    color: white;
+}
+.team-card .info{
+    margin-left: 60px;
+    padding: 10px 0 0 20px;
+}
+.team-card .info h3{
+    color: var(--main-color);
+}
+.team-card .info p{
+    font-size: 0.8rem;
+    color: #777;
+}
+@media (max-width : 767px){
+    .team-card::before{
+        width: 100%;
+    }
+    .team-card:hover::after{
+        width: 100%;
+    }
+    .team-card .content{
+        flex-direction: column;
+    }
+    .team-card .content .social{
+        flex-direction: row;
+    }
+    .team-card .content img{
+        /* width: 200px; */
+        width: 100%;
+        padding: 10px;
+    }
+    .team-card .info{
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+    }
+}
+/* --------------------------end global team member section framework -------------------------- */
+
+/* --------------------------start global services section framework -------------------------- */
+.service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    position: relative;
+    box-shadow: var(--shadow);
+    counter-increment: srv;
+    transition: var(--transition-duration);
+}
+.service:hover{
+    transform: translateY(-10px);
+}
+.service::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: var(--main-color);
+    top: -3px;
+    right: 50%;
+    transform: translateX(50%);
+    transition: var(--transition-duration);
+}
+.service:hover::before{
+    width: 100%;
+}
+.service i{
+    color: var(--gray-section-background);
+    font-size: 4rem;
+    padding: 20px;
+}
+.service h4{
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+.service span{
+    background-color: #fafafa;
+    width: 100%;
+    padding: 5px 10px;
+    text-align: right;
+    position: relative;
+}
+.service span a{
+    color: var(--main-color);
+    font-size: 0.8rem;
+}
+.service span::before{
+    content: "0" counter(srv);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50px;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 30px;
+}
+.service span::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50px;
+    height: 100%;
+    width: 40px;
+    background-color: #ccc;
+    transform: skewX(-20deg);
+}
+/* --------------------------end global services section framework -------------------------- */
+
+/* --------------------------start global skills section framework -------------------------- */
+.skill{
+    margin: 20px 0;
+}
+.skill .text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.skill .text span{
+    font-size: 0.8rem;
+    font-weight: normal;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 2px;
+    color: var(--main-color);
+}
+.skill .graph{
+    height: 20px;
+    background-color: var(--gray-section-background);
+    position: relative;
+}
+.skill .graph span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--main-color);
+
+}
+/* --------------------------end global skills section framework -------------------------- */
+
+/* --------------------------start global pricing section framework -------------------------- */
+.plan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: var(--shadow);
+    padding: 20px 0;
+    position: relative;
+}
+/* .plan:nth-child(2){
+    position: relative;
+    bottom: 20px;
+} */
+.plan h3{
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+.plan img{
+    width: 64px;
+}
+.plan h4{
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-top: 20px;
+}
+.plan span{
+    color: #ccc;
+}
+.plan ul{
+    width: 100%;
+    padding: 20px 0;
+}
+.plan ul li{
+    color: #ccc;
+    position: relative;
+    padding: 10px 40px;
+    border-bottom: 1px solid #ccc;
+    line-height: 2;
+    font-size: 1.1rem;
+}
+.plan ul li:last-child{
+    border: none;
+}
+.plan ul li::before{
+    font-family: "Font Awesome 6 Free";
+    content:"\f00c";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    color: var(--main-color);
+}
+.plan a{
+    display: block;
+    color: var(--main-color);
+    font-weight: bold;
+    border: 2px solid var(--main-color);
+    padding: 10px 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    background: linear-gradient(to right, var(--main-color) 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right;
+    transition: var(--transition-duration);
+}
+.plan a:hover{
+    background-position: left;
+    color: white;
+}
+.plan .label{
+    position: absolute;
+    top: 0;
+    right:30px;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    writing-mode: vertical-lr;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    width: 60px;
+    height: 200px;
+}
+.plan .label::before{
+    content: "";
+    position: absolute;
+    right: 50%;
+    bottom: -1px;
+    transform: translateX(50%);
+    border-width: 30px;
+    border-style: solid;
+    border-color: transparent  transparent white transparent;
+}
+/* --------------------------end global pricing section framework -------------------------- */
+
+/* --------------------------start global video section framework -------------------------- */
+.holder{
+    background-color: var(--gray-section-background);
+}
+.holder .list{
+    margin: 10px;
+    min-width: 300px;
+}
+.holder .list h3{
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+.holder .list ul li{
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    color: #777;
+    transition: var(--transition-duration);
+    cursor: pointer;
+}
+.holder .list ul li:hover{
+    color: var(--main-color);
+}
+.holder .list ul li span{
+    font-size: 0.9rem;
+}
+.holder .preview{
+    padding: 10px;
+}
+.holder .preview h3{
+    background-color: white;
+    margin-top: 20px;
+    padding: 10px 20px;
+    display: block;
+    width: 100%;
+}
+/* --------------------------end global video section framework -------------------------- */
+
+@media(max-width:767px){
+    .hide-mobile{
+        display: none;
+    }
+    .block-mobile{
+        display: block;
+    }
+}

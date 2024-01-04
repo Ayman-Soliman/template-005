@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lefty Mummy Template 05</title>
+
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <link rel="stylesheet" href="css/fwork.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <div class="side-bullets fixed">
+        <!-- <div class="bullet rad-50 relative w-full">
+            <div class="tool-tip c-white bg-main p-5 txt-c absolute rad-6">About Us</div>
+        </div> -->
+    </div>
+    <div class="settings fixed">
+        <div class="gear p-5 bg-white absolute txt-c border-main" id="gear">
+            <i class="gear-icon fas fa-gear"></i>
+        </div>
+        <div class="settings-box bg-white p-20 border-main">
+            <div class="option-box bg-grey p-10 rad-6 txt-c mb-10">
+                <h4 class="c-grey ">Colors</h4>
+                <ul class="colors-list flex-center pt-10">
+                    <!-- <li class="rad-50 m-5 border-black active"></li>
+                        <li class="rad-50 m-5 border-black"></li>
+                        <li class="rad-50 m-5 border-black"></li>
+                        <li class="rad-50 m-5 border-black"></li> -->
+                </ul>
+            </div>
+            <div class="option-box bg-grey p-10 rad-6 txt-c mb-10">
+                <h4 class="c-grey mb-10">Auto-Change Slide Images</h4>
+                <div class="slide-change-buttons">
+                    <a href="#" class="btn bg-black c-white active yes">Yes</a>
+                    <a href="#" class="btn bg-black c-white no">No</a>
+                </div>
+            </div>
+            <button class="reset-button block w-full auto bg-red c-white btn bold">RESET OPTIONS</button>
+        </div>
+    </div>
+    <nav class="nav-bar sticky bg-black shadow">
+        <div class="container flex-center-between p-10 ">
+            <div class="logo flex-center gap-10">
+                <img src="images/avatar.png" alt="" class="rad-50 border-white">
+                <span class="brand c-main bold">Lefty Mummy</span>
+            </div>
+            <i class="burger-bars fas fa-bars c-white fa-2x"></i>
+            <ul class="links flex-align-center">
+                <li class="mr-20">
+                    <a class="c-white active" href="#" data-section="about-us">About</a>
+                </li>
+                <li class="mr-20">
+                    <a class="c-white" href="#" data-section="skills">Skills</a>
+                </li>
+                <li class="mr-20">
+                    <a class="c-white" href="#" data-section="gallery">Gallery</a>
+                </li>
+                <li class="mr-20">
+                    <a class="c-white" href="#" data-section="timeline">Timeline</a>
+                </li>
+                <li class="mr-20">
+                    <a class="c-white" href="#" data-section="contact-us">Contact Us</a>
+                </li>
+                <li class="" id="settings-link">
+                    <a class="c-white setting-link" href="#">Settings</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="image-slider relative">
+            <img class="absolute" src="images/course-01.jpg" alt="">
+            <img class="absolute" src="images/course-02.jpg" alt="">
+            <img class="absolute" src="images/course-03.jpg" alt="">
+            <img class="absolute" src="images/course-04.jpg" alt="">
+            <div class="slider-overlay absolute"></div>
+            <div class="text container absolute p-20  txt-c">
+                <h3 class="c-main mb-20">Lefty Mummy</h3>
+                <p class="c-white disc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam perferendis explicabo amet distinctio rerum ea!</p>
+            </div>
+            <div class="container arrows absolute flex-center-between">
+                <i class="left-arrow fas fa-chevron-left fa-3x c-main bg-main-transparent p-5 rad-6"></i>
+                <i class="right-arrow fas fa-chevron-right fa-3x c-main bg-main-transparent p-5 rad-6"></i>
+            </div>
+            <ul class="bullets absolute flex-center">
+                <!-- <li class="active bg-dark-grey rad-50 flex-center ml-5 mr-5"></li>
+                <li class="bg-dark-grey rad-50 flex-center ml-5 mr-5"></li> -->
+            </ul>
+    </div>
+    <section class="about section-padding" id="about-us">
+        <div class="container flex-center-between gap-20 wrap">
+            <div class="about-text">
+                <h2 class="c-main mb-20">About Us</h2>
+                <p class="c-grey">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum adipisci excepturi id error quasi repudiandae nobis tempore reiciendis molestiae at.</p>
+            </div>
+            <img src="images/welcome.png" alt="" class="about-img">
+        </div>
+    </section>
+    <section class="our-skills bg-grey section-padding" id="skills">
+        <div class="container">
+            <h2 class="c-main txt-c">Our Skills</h2>
+            <div class="skill bg-white flex-center-between">
+                <span class="skill-name p-5 c-main txt-c">HTML</span>
+                <div class="skill-progress m-10 flex-1 rad-6 bg-grey relative">
+                    <span class="progress-bar absolute bg-main rad-6" data-width = "95%"></span>
+                </div>
+            </div>
+            <div class="skill bg-white flex-center-between">
+                <span class="skill-name p-5 c-main txt-c">CSS</span>
+                <div class="skill-progress m-10 flex-1 rad-6 bg-grey relative">
+                    <span class="progress-bar absolute bg-main rad-6" data-width = "85%"></span>
+                </div>
+            </div>
+            <div class="skill bg-white flex-center-between">
+                <span class="skill-name p-5 c-main txt-c">JavaScript</span>
+                <div class="skill-progress m-10 flex-1 rad-6 bg-grey relative">
+                    <span class="progress-bar absolute bg-main rad-6" data-width = "90%"></span>
+                </div>
+            </div>
+            <div class="skill bg-white flex-center-between">
+                <span class="skill-name p-5 c-main txt-c">PHP</span>
+                <div class="skill-progress m-10 flex-1 rad-6 bg-grey relative">
+                    <span class="progress-bar absolute bg-main rad-6" data-width = "70%"></span>
+                </div>
+            </div>
+            <div class="skill bg-white flex-center-between">
+                <span class="skill-name p-5 c-main txt-c">MySQL</span>
+                <div class="skill-progress m-10 flex-1 rad-6 bg-grey relative">
+                    <span class="progress-bar absolute bg-main rad-6" data-width = "80%"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="gallery-overlay fixed w-full bg-black-transparent flex-center">
+        <div class="container arrows absolute flex-center-between">
+            <i class="left-arrow fas fa-chevron-left fa-3x c-white p-5 rad-6 bg-main"></i>
+            <i class="right-arrow fas fa-chevron-right fa-3x c-white p-5 rad-6 bg-main"></i>
+        </div>
+        <div class="flashing-card relative">
+            <h3 class="mb-10 txt-c c-main bold">image one</h3>
+            <i class="fas fa-xmark absolute c-white fa-2x rad-50 bg-main flex-center close-overlay"></i>
+            <div class="card-img">
+                <img src="images/gallery-02.png" alt="Image Three">
+            </div>
+        </div>
+    </div>
+    <section class="gallery section-padding bg relative" id="gallery">
+        <h2 class="container c-main mb-20 txt-c">Gallery</h2>
+        <div class="container grid-col-4 pt-20">
+            <!--------------------------------- repeat this gallery card------------------------------------>
+            <div class="flashing-card">
+                <div class="card-img">
+                    <img src="images/gallery-02.png" alt="Image One">
+                </div>
+            </div>
+            <div class="flashing-card">
+                <div class="card-img">
+                    <img src="images/gallery-03.jpg" alt="Image Two">
+                </div>
+            </div>
+            <div class="flashing-card">
+                <div class="card-img">
+                    <img src="images/gallery-04.png" alt="Image Three">
+                </div>
+            </div>
+            <div class="flashing-card">
+                <div class="card-img">
+                    <img src="images/gallery-05.jpg" alt="Image Four">
+                </div>
+            </div>
+            <div class="flashing-card">
+                <div class="card-img">
+                    <img src="images/gallery-04.png" alt="">
+                </div>
+            </div>
+            <div class="flashing-card">
+                <div class="card-img">
+                    <img src="images/gallery-01.png" alt="">
+                </div>
+            </div>
+            <div class="flashing-card">
+                <div class="card-img">
+                    <img src="images/gallery-06.png" alt="">
+                </div>
+            </div>
+            <div class="flashing-card">
+                <div class="card-img">
+                    <img src="images/gallery-02.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="timeline bg-grey section-padding" id="timeline">
+            <div class="container">
+                <h2 class="c-main mb-20 txt-c">Timeline</h2>
+                <div class="timeline-wrap relative">
+                    <div class="one-row relative">
+                        <div class="year auto txt-c bg-main c-white  btn fit-content ">2023</div>
+                        <div class="grid-col-2 gap-20 mt-20 mb-20">
+                            <div class="left text rad-6 bg-white relative p-20 m-10">
+                                <h4 class="c-main mb-20">Project Discription</h4>
+                                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. In vitae placeat voluptates provident optio minus tenetur deserunt, nam delectus nisi velit necessitatibus esse? Voluptas culpa quo sapiente voluptate, veniam nihil!</p>
+                            </div>
+                            <div class="right"></div>
+                        </div>
+                    </div>
+                    <div class="one-row relative">
+                        <div class="year auto txt-c bg-main c-white  btn fit-content ">2022</div>
+                        <div class="grid-col-2 gap-20 mt-20 mb-20">
+                            <div class="left"></div>
+                            <div class="right text rad-6 bg-white relative p-20 m-10">
+                                <h4 class="c-main mb-20">Project Discription</h4>
+                                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. In vitae placeat voluptates provident optio minus tenetur deserunt, nam delectus nisi velit necessitatibus esse? Voluptas culpa quo sapiente voluptate, veniam nihil!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="one-row relative">
+                        <div class="grid-col-2 gap-20 mt-20 mb-20">
+                            <div class="left"></div>
+                            <div class="right text rad-6 bg-white relative p-20 m-10">
+                                <h4 class="c-main mb-20">Project Discription</h4>
+                                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. In vitae placeat voluptates provident optio minus tenetur deserunt, nam delectus nisi velit necessitatibus esse? Voluptas culpa quo sapiente voluptate, veniam nihil!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section class="contact-us section-padding" id="contact-us">
+            <h2 class="c-main mb-20 txt-c">Contact Us</h2>
+            <div class="container">
+                <form class=" flex-center-between gap-20" action="">
+                    <div class="left flex-1">
+                        <input class="w-full mb-10 p-5 " type="text" placeholder="Your Name">
+                        <input class="w-full mb-10 p-5" type="number" placeholder="Number">
+                        <input class="w-full mb-10 p-5" type="email" placeholder="Your Email">
+                        <input class="w-full p-5" type="text" placeholder="Subject">
+                    </div>
+                    <div class="right flex-1">
+                        <textarea class="w-full mb-5 p-5" name="" placeholder="Your Message"></textarea>
+                        <input class="bg-main c-white w-full p-5 bold" type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer class="bg-black c-white txt-c p-20">All Rights Reserved &copy;<span class="c-main bold"> Ayman Soliman</span></footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
